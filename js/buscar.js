@@ -18,7 +18,7 @@ async function ejecutarBusqueda(index = false) {
       datosUrl = "./js/datos.json";
     }
     const respuesta = await fetch(datosUrl);
-    if (!respuesta.ok) throw new Error("No se pudo cargar la base de datos.");
+    if (!respuesta.ok) alert("No se pudo cargar la base de datos.");
 
     const paginas = await respuesta.json();
 
