@@ -1,0 +1,102 @@
+[
+  {
+    "titulo": "Unidad 1 - Redes Informáticas",
+    "url": "contenido.html",
+    "contenido": "redes informáticas hardware software PAN LAN MAN WAN conceptos básicos"
+  },
+  {
+    "titulo": "Conceptos de Redes",
+    "url": "contenido1-1.html",
+    "contenido": "definición red informática compartir recursos dispositivos interconectados"
+  },
+  {
+    "titulo": "Clasificación de Redes (Alcance)",
+    "url": "contenido1-2.html",
+    "contenido": "clasificación área cobertura PAN LAN CAN MAN WAN SAN"
+  },
+  {
+    "titulo": "Componentes de una Red",
+    "url": "contenido1-3.html",
+    "contenido": "servidores estaciones de trabajo tarjetas de red switches routers"
+  },
+  {
+    "titulo": "Topologías de Red",
+    "url": "contenido1-4.html",
+    "contenido": "topología física lógica bus estrella anillo malla híbrida"
+  },
+  {
+    "titulo": "Medios de Transmisión",
+    "url": "contenido1-5.html",
+    "contenido": "par trenzado cable coaxial fibra óptica wifi bluetooth microondas"
+  },
+  {
+    "titulo": "Protocolos y Direccionamiento",
+    "url": "contenido1-6.html",
+    "contenido": "protocolo TCP/IP dirección IP máscara de subred gateway DNS"
+  },
+  {
+    "titulo": "Seguridad en Redes",
+    "url": "contenido1-7.html",
+    "contenido": "cortafuegos firewall antivirus cifrado contraseñas seguridad inalámbrica"
+  },
+  {
+    "titulo": "Unidad 2 - Internet y Navegación",
+    "url": "contenido2.html",
+    "contenido": "historia internet protocolos servicios www navegadores buscadores"
+  },
+  {
+    "titulo": "Historia de Internet",
+    "url": "contenido2-1.html",
+    "contenido": "ARPANET cronología evolución hitos históricos tim berners-lee"
+  },
+  {
+    "titulo": "Navegadores Web",
+    "url": "contenido2-2.html",
+    "contenido": "Chrome Firefox Edge Safari navegadores más usados características"
+  },
+  {
+    "titulo": "Buscadores y Estrategias",
+    "url": "contenido2-3.html",
+    "contenido": "Google Bing Yahoo DuckDuckGo operadores de búsqueda filtros"
+  },
+  {
+    "titulo": "Correo Electrónico",
+    "url": "contenido2-4.html",
+    "contenido": "Gmail Outlook correo corporativo bandeja de entrada spam configuración"
+  },
+  {
+    "titulo": "Servicios en la Nube",
+    "url": "contenido2-5.html",
+    "contenido": "Cloud computing Google Drive OneDrive Dropbox almacenamiento remoto"
+  },
+  {
+    "titulo": "Redes Sociales",
+    "url": "contenido2-6.html",
+    "contenido": "Facebook Instagram Twitter LinkedIn comunicación digital perfiles"
+  },
+  {
+    "titulo": "Seguridad en Internet",
+    "url": "contenido2-7.html",
+    "contenido": "phishing estafas navegación segura certificados SSL cookies"
+  },
+  {
+    "titulo": "Unidad 3 - Aplicaciones Web",
+    "url": "contenido3.html",
+    "contenido": "aplicaciones en línea herramientas colaborativas ofimática web"
+  },
+  {
+    "titulo": "Herramientas de Google",
+    "url": "contenido3-1.html",
+    "contenido": "Google Docs Sheets Slides Forms educación herramientas gratis"
+  },
+  {
+    "titulo": "Plataformas Educativas",
+    "url": "contenido3-2.html",
+    "contenido": "Moodle Classroom entornos virtuales de aprendizaje EVA LMS"
+  },
+  {
+    "titulo": "Recursos Extra",
+    "url": "extra.html",
+    "contenido": "material descargable conceptos adicionales documentos guía estudio"
+  }
+]
