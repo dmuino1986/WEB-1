@@ -1,275 +1,342 @@
-<!DOCTYPE html>
-<html id="inicioo"  lang="en" style="text-align: justify;">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html id="inicioo" lang="en" style="text-align: justify">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INFO BASIC</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="icon" href="icono.ico">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="icon" href="icono.ico" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar fixed-top navbar-dark  navbar-expand-lg"
-        style="background-color: rgba(0, 0, 0, .4)">
-            <div class="container">
-                <img src="../images/logo-icon.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
-                <a href="" class="navbar-brand">INFO BASIC</a>
-                <button class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#contenidoMenu" 
-                aria-controls="contenidoMenu" 
-                aria-expanded="false" 
-                aria-label="Mostrar/Ocultar Navegacion"
+      <nav
+        class="navbar fixed-top navbar-dark navbar-expand-lg"
+        style="background-color: rgba(0, 0, 0, 0.4)"
+      >
+        <div class="container">
+          <img
+            src="../images/logo-icon.png"
+            alt="Logo"
+            width="50"
+            height="50"
+            class="d-inline-block align-text-top"
+          />
+          <a href="" class="navbar-brand">INFO BASIC</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#contenidoMenu"
+            aria-controls="contenidoMenu"
+            aria-expanded="false"
+            aria-label="Mostrar/Ocultar Navegacion"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="contenidoMenu">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Inicio</a>
+              </li>
+
+              <li class="nav-item dropdown" data-bs-theme="dark">
+                <a
+                  href=""
+                  class="nav-link dropdown-toggle"
+                  id="submenuProdutos"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-<span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="contenidoMenu">
-                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a href="../index.html" class="nav-link">Inicio</a>
-                    </li>
-
-
-                    <li class="nav-item dropdown" data-bs-theme="dark">
-                        <a 
-                        href="" 
-                        class="nav-link dropdown-toggle"
-                        id="submenuProdutos"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        >
-                        Contenido
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="submenuProdutos">
-                     <li><a href="../contenido/contenido.html" class="dropdown-item">Año 1</a></li> 
-                     <li><a href="extra.html" class="dropdown-item">Info Extra</a></li> 
-                    </ul>
-                    </li>
-
-                    <li class="nav-item">
-                      <a href="../contactos.html" class="nav-link">Contactos</a>
-                  </li>
-
-                 </ul>  
-
-                 <form class="d-flex">
-                    <input 
-                    type="search"
-                    class="form-control me-2"
-                    aria-label="Buscar"
-                    placeholder="Buscar"
+                  Contenido
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="submenuProdutos">
+                  <li>
+                    <a href="../contenido/contenido.html" class="dropdown-item"
+                      >Año 1</a
                     >
-                    <button class="btn btn-primary">Buscar</button>
-                 </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <!--CONTENIDO-->
-    <link rel="stylesheet" href="../custom.css">
-       
-    <div
-       class="masthead"
-       style="background-image: url('../images/fondo-wave.jpg');"
-       
-       >
-        <div class="color-overlay d-flex justify-content-center align-items-center">
-          <h1>Descubre el mundo de
-            la Informática y domina sus secretos.</h1>
+                  </li>
+                  <li>
+                    <a href="extra.html" class="dropdown-item">Info Extra</a>
+                  </li>
+                </ul>
+              </li>
 
+              <li class="nav-item">
+                <a href="../contactos.html" class="nav-link">Contactos</a>
+              </li>
+            </ul>
+
+            <form
+              class="d-flex"
+              onsubmit="
+                event.preventDefault();
+                ejecutarBusqueda();
+              "
+            >
+              <input
+                id="inputBusqueda"
+                type="search"
+                class="form-control me-2"
+                aria-label="Buscar"
+                placeholder="Buscar tema..."
+              />
+              <button
+                class="btn btn-primary"
+                type="button"
+                onclick="ejecutarBusqueda()"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
         </div>
-       </div>
+      </nav>
+    </header>
 
-       <h2 class="text-center text-decoration-underline mt-3">Formas de comunicación, modo texto, modo grafico.</h2>
- 
- 
- 
-       <div class="container mt-3">
-        
-    <div class="row justify-content-between">
+    <!--CONTENIDO-->
+    <link rel="stylesheet" href="../custom.css" />
 
-      <div class="col-8">
+    <div
+      class="masthead"
+      style="background-image: url(&quot;../images/fondo-wave.jpg&quot;)"
+    >
+      <div
+        class="color-overlay d-flex justify-content-center align-items-center"
+      >
+        <h1>Descubre el mundo de la Informática y domina sus secretos.</h1>
+      </div>
+    </div>
 
-        <p class="lh-1 fs-5">En informática básica, la comunicación se puede clasificar en diferentes formas y modos. Dos de 
-          los modos más comunes son el modo texto y el modo gráfico. A continuación, se describen 
-          ambos:
+    <h2 class="text-center text-decoration-underline mt-3">
+      Formas de comunicación, modo texto, modo grafico.
+    </h2>
+
+    <div class="container mt-3">
+      <div class="row justify-content-between">
+        <div class="col-8">
+          <p class="lh-1 fs-5">
+            En informática básica, la comunicación se puede clasificar en
+            diferentes formas y modos. Dos de los modos más comunes son el modo
+            texto y el modo gráfico. A continuación, se describen ambos:
           </p>
 
-          <p class="lh-1 fs-5"><b>Modo Texto</b>: El modo texto se refiere a la comunicación que utiliza caracteres alfanuméricos 
-            para representar información. Este modo es común en interfaces de línea de comandos y 
-            editores de texto. </p>
-            
-          
+          <p class="lh-1 fs-5">
+            <b>Modo Texto</b>: El modo texto se refiere a la comunicación que
+            utiliza caracteres alfanuméricos para representar información. Este
+            modo es común en interfaces de línea de comandos y editores de
+            texto.
+          </p>
+
           <h5>Características</h5>
           <ul>
-          <li>Simplicidad: Utiliza solo texto, lo que lo hace fácil de entender y utilizar.</li>
-          <li>Bajo consumo de recursos: Requiere menos recursos del sistema en comparación con las 
-            interfaces gráficas.</li>
-          <li>Interacción mediante comandos: Los usuarios interactúan a través de comandos escritos, lo 
-            que puede ser más eficiente para usuarios avanzados</li>
-</ul>
-<p class="lh-1 fs-5">Ejemplos: Terminal de Linux, símbolo del sistema de Windows, editores de texto como 
-  Notepad o Vim.</p>
+            <li>
+              Simplicidad: Utiliza solo texto, lo que lo hace fácil de entender
+              y utilizar.
+            </li>
+            <li>
+              Bajo consumo de recursos: Requiere menos recursos del sistema en
+              comparación con las interfaces gráficas.
+            </li>
+            <li>
+              Interacción mediante comandos: Los usuarios interactúan a través
+              de comandos escritos, lo que puede ser más eficiente para usuarios
+              avanzados
+            </li>
+          </ul>
+          <p class="lh-1 fs-5">
+            Ejemplos: Terminal de Linux, símbolo del sistema de Windows,
+            editores de texto como Notepad o Vim.
+          </p>
 
+          <h5>Ventajas</h5>
+          <ul>
+            <li>
+              Ideal para tareas de programación y administración del sistema.
+            </li>
+            <li>Permite un control preciso sobre las operaciones.</li>
+          </ul>
 
-  <h5>Ventajas</h5>
-         <ul>
-          <li>Ideal para tareas de programación y administración del sistema.</li>
-          <li>Permite un control preciso sobre las operaciones.</li>
-</ul>
+          <h5>Desventajas</h5>
+          <ul>
+            <li>Puede ser menos intuitivo para principiantes.</li>
+            <li>Carece de elementos visuales que faciliten la comprensión.</li>
+          </ul>
 
-<h5>Desventajas</h5>
-<ul>
- <li>Puede ser menos intuitivo para principiantes.</li>
- <li>Carece de elementos visuales que faciliten la comprensión.</li>
-</ul>
+          <p class="lh-1 fs-5">
+            <b>Modo Gráfico</b>:El modo gráfico utiliza elementos visuales como
+            ventanas, iconos, botones y menús para facilitar la interacción del
+            usuario con el sistema.
+          </p>
 
+          <h5>Características</h5>
+          <ul>
+            <li>
+              Interfaz visual: Permite a los usuarios interactuar con el sistema
+              a través de elementos gráficos.
+            </li>
+            <li>
+              Intuitividad: Más accesible para principiantes, ya que no requiere
+              memorizar comandos.
+            </li>
+            <li>
+              Multitarea: Facilita la gestión de múltiples aplicaciones al
+              permitir el uso de ventanas superpuestas.
+            </li>
+          </ul>
 
- 
+          <h5>Ventajas</h5>
+          <ul>
+            <li>
+              Más fácil de aprender y usar para la mayoría de los usuarios.
+            </li>
+            <li>
+              Proporciona una experiencia más rica y atractiva visualmente.
+            </li>
+          </ul>
 
+          <h5>Desventajas</h5>
+          <ul>
+            <li>Puede consumir más recursos del sistema.</li>
+            <li>
+              A veces, las tareas pueden ser más lentas en comparación con el
+              uso de comandos.
+            </li>
+          </ul>
+        </div>
 
-<p class="lh-1 fs-5"><b>Modo Gráfico</b>:El modo gráfico utiliza elementos visuales como ventanas, iconos, botones y 
-  menús para facilitar la interacción del usuario con el sistema.
-  </p>
-  
-
-<h5>Características</h5>
-<ul>
-<li>Interfaz visual: Permite a los usuarios interactuar con el sistema a través de elementos 
-  gráficos.</li>
-<li>Intuitividad: Más accesible para principiantes, ya que no requiere memorizar comandos.</li>
-<li>Multitarea: Facilita la gestión de múltiples aplicaciones al permitir el uso de ventanas 
-  superpuestas.</li>
-</ul>
-
-
-
-
-<h5>Ventajas</h5>
-<ul>
-<li>Más fácil de aprender y usar para la mayoría de los usuarios.</li>
-<li>Proporciona una experiencia más rica y atractiva visualmente.</li>
-</ul>
-
-<h5>Desventajas</h5>
-<ul>
-<li>Puede consumir más recursos del sistema.</li>
-<li>A veces, las tareas pueden ser más lentas en comparación con el uso de comandos.</li>
-</ul>
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-       <div class="col-7">
-        <div class="list-group" style="filter: drop-shadow(0px 0px 2px #181717);">
-            <a href="contenido.html" class="list-group-item list-group-item-action" aria-current="true">
+        <div class="col-7">
+          <div
+            class="list-group"
+            style="filter: drop-shadow(0px 0px 2px #181717)"
+          >
+            <a
+              href="contenido.html"
+              class="list-group-item list-group-item-action"
+              aria-current="true"
+            >
               Resumen breve de la unidad
             </a>
-            <a href="contenido1-1.html" class="list-group-item list-group-item-action">Elementos Principales de un Sistema Operativo</a>
-            <a href="contenido1-2.html" class="list-group-item list-group-item-action">Diferentes tipos de sistemas operativos, ventajas y desventajas.</a>
-            <a href="contenido1-3.html" class="list-group-item list-group-item-action active">Formas de comunicación, modo texto, modo grafico.</a>
-            <a href="contenido1-4.html" class="list-group-item list-group-item-action">Escritorio, icono, ventanas.</a>
-            <a href="contenido1-5.html" class="list-group-item list-group-item-action">Operaciones elementales como administrador del S.O. y como usuario común.</a>
-            <a href="contenido1-6.html" class="list-group-item list-group-item-action">Formas de organización de la información. Carpetas y archivos. (Crear, Renombrar, mover, copiar, eliminar, proteger).</a>
-            <a href="contenido1-7.html" class="list-group-item list-group-item-action">Configuración de algunos elementos del sistema operativo.</a>
+            <a
+              href="contenido1-1.html"
+              class="list-group-item list-group-item-action"
+              >Elementos Principales de un Sistema Operativo</a
+            >
+            <a
+              href="contenido1-2.html"
+              class="list-group-item list-group-item-action"
+              >Diferentes tipos de sistemas operativos, ventajas y
+              desventajas.</a
+            >
+            <a
+              href="contenido1-3.html"
+              class="list-group-item list-group-item-action active"
+              >Formas de comunicación, modo texto, modo grafico.</a
+            >
+            <a
+              href="contenido1-4.html"
+              class="list-group-item list-group-item-action"
+              >Escritorio, icono, ventanas.</a
+            >
+            <a
+              href="contenido1-5.html"
+              class="list-group-item list-group-item-action"
+              >Operaciones elementales como administrador del S.O. y como
+              usuario común.</a
+            >
+            <a
+              href="contenido1-6.html"
+              class="list-group-item list-group-item-action"
+              >Formas de organización de la información. Carpetas y archivos.
+              (Crear, Renombrar, mover, copiar, eliminar, proteger).</a
+            >
+            <a
+              href="contenido1-7.html"
+              class="list-group-item list-group-item-action"
+              >Configuración de algunos elementos del sistema operativo.</a
+            >
           </div>
+        </div>
+
+        <div class="col-7">
+          <div
+            class="list-group"
+            style="filter: drop-shadow(0px 0px 2px #181717)"
+          >
+            <a
+              href="../contenido/contenido.html"
+              class="list-group-item list-group-item-action active"
+              aria-current="true"
+            >
+              Unidad 1
+            </a>
+            <a
+              href="contenido2.html"
+              class="list-group-item list-group-item-action"
+              >Unidad 2</a
+            >
+            <a
+              href="contenido3.html"
+              class="list-group-item list-group-item-action"
+              >Unidad 3</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
-<div class="col-7">
-  <div class="list-group" style="filter: drop-shadow(0px 0px 2px #181717);">
-      <a href="../contenido/contenido.html" class="list-group-item list-group-item-action active" aria-current="true">
-        Unidad 1
-      </a>
-      <a href="contenido2.html" class="list-group-item list-group-item-action">Unidad 2</a>
-      <a href="contenido3.html" class="list-group-item list-group-item-action">Unidad 3</a>
-    </div>
-    
-   
-  </div>
+    <!--FOOTER PIE DE PAGINA-->
 
-
-
-
- </div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-    
-    
- 
-    
-
-
-
-
-
-    
-<!--FOOTER PIE DE PAGINA-->
-
-
-<div class="container">
-  <div class="row justify-content-center">
-  <footer class="d-flex flex-wrap align-items-center justify-content-center py-3 my-4 border-top  fw-bold">
-    <p class="col-md-4 mb-0 text-body-secondary">Copyright ©2025; Centro Fernando Aguado y Rico.</p>
-
-
-
-    <ul class="nav col-md-4">
-      <li class="nav-item"><a href="#inicioo" class="nav-link px-2 text-body-secondary">Ir al principio</a></li>
-      <li class="nav-item dropdown" data-bs-theme="dark">
-        <a 
-        href="" 
-        class="nav-link dropdown-toggle"
-        id="submenuProdutos"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-        style="color: rgba(33, 37, 41, 0.75);"
+    <div class="container">
+      <div class="row justify-content-center">
+        <footer
+          class="d-flex flex-wrap align-items-center justify-content-center py-3 my-4 border-top fw-bold"
         >
-        Contenido
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="submenuProdutos">
-     <li><a href="../contenido/contenido.html" class="dropdown-item">Año 1</a></li> 
-     <li><a href="extra.html" class="dropdown-item">Info Extra</a></li> 
-    </ul>
-    </li>
-    <li class="nav-item"><a href="../contactos.html" class="nav-link px-2 text-body-secondary">Contactos</a></li>
-    </ul>
-  </footer>
-</div>
-</div>
-    
-    
-    
+          <p class="col-md-4 mb-0 text-body-secondary">
+            Copyright ©2025; Centro Fernando Aguado y Rico.
+          </p>
+
+          <ul class="nav col-md-4">
+            <li class="nav-item">
+              <a href="#inicioo" class="nav-link px-2 text-body-secondary"
+                >Ir al principio</a
+              >
+            </li>
+            <li class="nav-item dropdown" data-bs-theme="dark">
+              <a
+                href=""
+                class="nav-link dropdown-toggle"
+                id="submenuProdutos"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: rgba(33, 37, 41, 0.75)"
+              >
+                Contenido
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="submenuProdutos">
+                <li>
+                  <a href="../contenido/contenido.html" class="dropdown-item"
+                    >Año 1</a
+                  >
+                </li>
+                <li>
+                  <a href="extra.html" class="dropdown-item">Info Extra</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                href="../contactos.html"
+                class="nav-link px-2 text-body-secondary"
+                >Contactos</a
+              >
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
     <script src="../js/bootstrap.bundle.min.js"></script>
-
-
-</body>
+  </body>
 </html>

@@ -55,16 +55,28 @@
                </ul>  
 
                  </ul>  
-
-                 <form class="d-flex">
-                    <input 
-                    type="search"
-                    class="form-control me-2"
-                    aria-label="Buscar"
-                    placeholder="Buscar"
-                    >
-                    <button class="btn btn-primary">Buscar</button>
-                 </form>
+             <form
+              class="d-flex"
+              onsubmit="
+                event.preventDefault();
+                ejecutarBusqueda();
+              "
+            >
+              <input
+                id="inputBusqueda"
+                type="search"
+                class="form-control me-2"
+                aria-label="Buscar"
+                placeholder="Buscar tema..."
+              />
+              <button
+                class="btn btn-primary"
+                type="button"
+                onclick="ejecutarBusqueda()"
+              >
+                Buscar
+              </button>
+            </form>
                 </div>
             </div>
         </nav>

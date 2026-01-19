@@ -1,296 +1,365 @@
-<!DOCTYPE html>
-<html id="inicioo"  lang="en" style="text-align: justify;">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html id="inicioo" lang="en" style="text-align: justify">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INFO BASIC</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="icon" href="icono.ico">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="icon" href="icono.ico" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar fixed-top navbar-dark  navbar-expand-lg"
-        style="background-color: rgba(0, 0, 0, .4)">
-            <div class="container">
-                <img src="../images/logo-icon.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
-                <a href="" class="navbar-brand">INFO BASIC</a>
-                <button class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#contenidoMenu" 
-                aria-controls="contenidoMenu" 
-                aria-expanded="false" 
-                aria-label="Mostrar/Ocultar Navegacion"
+      <nav
+        class="navbar fixed-top navbar-dark navbar-expand-lg"
+        style="background-color: rgba(0, 0, 0, 0.4)"
+      >
+        <div class="container">
+          <img
+            src="../images/logo-icon.png"
+            alt="Logo"
+            width="50"
+            height="50"
+            class="d-inline-block align-text-top"
+          />
+          <a href="" class="navbar-brand">INFO BASIC</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#contenidoMenu"
+            aria-controls="contenidoMenu"
+            aria-expanded="false"
+            aria-label="Mostrar/Ocultar Navegacion"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="contenidoMenu">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Inicio</a>
+              </li>
+
+              <li class="nav-item dropdown" data-bs-theme="dark">
+                <a
+                  href=""
+                  class="nav-link dropdown-toggle"
+                  id="submenuProdutos"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-<span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="contenidoMenu">
-                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a href="../index.html" class="nav-link">Inicio</a>
-                    </li>
-
-
-                    <li class="nav-item dropdown" data-bs-theme="dark">
-                        <a 
-                        href="" 
-                        class="nav-link dropdown-toggle"
-                        id="submenuProdutos"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        >
-                        Contenido
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="submenuProdutos">
-                     <li><a href="../contenido/contenido.html" class="dropdown-item">Año 1</a></li> 
-                     <li><a href="extra.html" class="dropdown-item">Info Extra</a></li> 
-                    </ul>
-                    </li>
-
-                    <li class="nav-item">
-                      <a href="../contactos.html" class="nav-link">Contactos</a>
-                  </li>
-
-                 </ul>  
-
-                 <form class="d-flex">
-                    <input 
-                    type="search"
-                    class="form-control me-2"
-                    aria-label="Buscar"
-                    placeholder="Buscar"
+                  Contenido
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="submenuProdutos">
+                  <li>
+                    <a href="../contenido/contenido.html" class="dropdown-item"
+                      >Año 1</a
                     >
-                    <button class="btn btn-primary">Buscar</button>
-                 </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <!--CONTENIDO-->
-    <link rel="stylesheet" href="../custom.css">
-       
-    <div
-       class="masthead"
-       style="background-image: url('../images/fondo-wave.jpg');"
-       
-       >
-        <div class="color-overlay d-flex justify-content-center align-items-center">
-          <h1>Descubre el mundo de
-            la Informática y domina sus secretos.
-          </h1>
+                  </li>
+                  <li>
+                    <a href="extra.html" class="dropdown-item">Info Extra</a>
+                  </li>
+                </ul>
+              </li>
 
+              <li class="nav-item">
+                <a href="../contactos.html" class="nav-link">Contactos</a>
+              </li>
+            </ul>
+
+            <form
+              class="d-flex"
+              onsubmit="
+                event.preventDefault();
+                ejecutarBusqueda();
+              "
+            >
+              <input
+                id="inputBusqueda"
+                type="search"
+                class="form-control me-2"
+                aria-label="Buscar"
+                placeholder="Buscar tema..."
+              />
+              <button
+                class="btn btn-primary"
+                type="button"
+                onclick="ejecutarBusqueda()"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
         </div>
-       </div>
+      </nav>
+    </header>
 
-       <h2 class="text-center text-decoration-underline mt-3">Escritorio, icono, ventanas.</h2>
- 
- 
- 
-       <div class="container mt-3">
-        
-    <div class="row justify-content-between">
+    <!--CONTENIDO-->
+    <link rel="stylesheet" href="../custom.css" />
 
-      <div class="col-8">
+    <div
+      class="masthead"
+      style="background-image: url(&quot;../images/fondo-wave.jpg&quot;)"
+    >
+      <div
+        class="color-overlay d-flex justify-content-center align-items-center"
+      >
+        <h1>Descubre el mundo de la Informática y domina sus secretos.</h1>
+      </div>
+    </div>
 
-        <p class="lh-1 fs-5">En informática básica, el concepto de escritorio, iconos y ventanas es fundamental para 
-          entender cómo interactuamos con un sistema operativo gráfico. A continuación, se describen 
-          cada uno de estos elementos:
+    <h2 class="text-center text-decoration-underline mt-3">
+      Escritorio, icono, ventanas.
+    </h2>
+
+    <div class="container mt-3">
+      <div class="row justify-content-between">
+        <div class="col-8">
+          <p class="lh-1 fs-5">
+            En informática básica, el concepto de escritorio, iconos y ventanas
+            es fundamental para entender cómo interactuamos con un sistema
+            operativo gráfico. A continuación, se describen cada uno de estos
+            elementos:
           </p>
 
-          <p class="lh-1 fs-5"><b>Escritorio
-          </b>: El escritorio es la interfaz principal que se muestra al usuario al iniciar un sistema 
-          operativo gráfico. Actúa como un espacio de trabajo donde se pueden organizar y acceder a 
-          diferentes aplicaciones y archivos.
-           </p>
-            
-          
+          <p class="lh-1 fs-5">
+            <b>Escritorio </b>: El escritorio es la interfaz principal que se
+            muestra al usuario al iniciar un sistema operativo gráfico. Actúa
+            como un espacio de trabajo donde se pueden organizar y acceder a
+            diferentes aplicaciones y archivos.
+          </p>
+
           <h5>Características</h5>
           <ul>
-          <li>Fondo de pantalla: Puede personalizarse con imágenes o colores.</li>
-          <li> Área de trabajo: Proporciona un espacio donde se pueden colocar accesos directos a 
-            programas, archivos y carpetas.</li>
-          <li> Barra de tareas: A menudo incluye una barra de tareas que muestra aplicaciones abiertas y 
-            permite acceder a funciones del sistema.
+            <li>
+              Fondo de pantalla: Puede personalizarse con imágenes o colores.
             </li>
-</ul>
+            <li>
+              Área de trabajo: Proporciona un espacio donde se pueden colocar
+              accesos directos a programas, archivos y carpetas.
+            </li>
+            <li>
+              Barra de tareas: A menudo incluye una barra de tareas que muestra
+              aplicaciones abiertas y permite acceder a funciones del sistema.
+            </li>
+          </ul>
 
+          <h5>Funcionalidad</h5>
+          <ul>
+            <li>
+              Permite al usuario lanzar aplicaciones y gestionar archivos de
+              manera visual.
+            </li>
+            <li>
+              Facilita la organización de recursos mediante la disposición de
+              iconos y accesos directos.
+            </li>
+          </ul>
 
-  <h5>Funcionalidad</h5>
-         <ul>
-          <li>Permite al usuario lanzar aplicaciones y gestionar archivos de manera visual.</li>
-          <li>Facilita la organización de recursos mediante la disposición de iconos y accesos directos.</li>
-</ul>
+          <p class="lh-1 fs-5">
+            <b>Icono</b>:Un icono es una representación gráfica que simboliza un
+            archivo, carpeta, aplicación o función en el sistema operativo.
+            Generalmente, son imágenes pequeñas que permiten a los usuarios
+            identificar rápidamente el recurso asociado.
+          </p>
 
+          <h5>Características</h5>
+          <ul>
+            <li>
+              Diseño visual: Los iconos suelen tener un diseño intuitivo que
+              indica su función (por ejemplo, un sobre para el correo
+              electrónico o una carpeta para almacenar archivos).
+            </li>
+            <li>
+              Interactividad: Los usuarios pueden hacer doble clic en un icono
+              para abrirlo o hacer clic derecho para acceder a opciones
+              adicionales
+            </li>
+          </ul>
 
+          <h5>Funcionalidad</h5>
+          <ul>
+            <li>
+              Facilitan la navegación y el acceso a aplicaciones y archivos sin
+              necesidad de recordar nombres o ubicaciones exactas.
+            </li>
+            <li>
+              Permiten personalizar el escritorio al agregar o eliminar iconos
+              según las preferencias del usuario.
+            </li>
+          </ul>
 
+          <p class="lh-1 fs-5">
+            <b>Ventanas</b>:Una ventana es un área rectangular en la pantalla
+            que muestra el contenido de una aplicación o archivo. Las ventanas
+            permiten a los usuarios trabajar con múltiples aplicaciones al mismo
+            tiempo.
+          </p>
 
- 
+          <h5>Características</h5>
+          <ul>
+            <li>
+              Bordes y títulos: Cada ventana tiene bordes que permiten
+              redimensionarla y un título que indica qué aplicación o documento
+              está abierto.
+            </li>
+            <li>
+              Controles de ventana: Incluyen botones para minimizar, maximizar y
+              cerrar la ventana.
+            </li>
+            <li>
+              Superposición: Las ventanas pueden superponerse unas sobre otras,
+              permitiendo al usuario ver y trabajar con varias aplicaciones
+              simultáneamente.
+            </li>
+          </ul>
 
+          <h5>Funcionalidad</h5>
+          <ul>
+            <li>
+              Facilitan la multitarea al permitir que los usuarios cambien entre
+              diferentes aplicaciones sin cerrar ninguna.
+            </li>
+            <li>
+              Proporcionan una forma organizada de visualizar información, ya
+              que cada ventana puede contener diferentes tipos de contenido
+              (texto, gráficos, datos).
+            </li>
+          </ul>
+        </div>
 
-<p class="lh-1 fs-5"><b>Icono</b>:Un icono es una representación gráfica que simboliza un archivo, carpeta, 
-  aplicación o función en el sistema operativo. Generalmente, son imágenes pequeñas que 
-  permiten a los usuarios identificar rápidamente el recurso asociado.
-  
-  </p>
-  
-
-<h5>Características</h5>
-<ul>
-<li>Diseño visual: Los iconos suelen tener un diseño intuitivo que indica su función (por ejemplo, 
-  un sobre para el correo electrónico o una carpeta para almacenar archivos).</li>
-<li>Interactividad: Los usuarios pueden hacer doble clic en un icono para abrirlo o hacer clic 
-  derecho para acceder a opciones adicionales</li>
-</ul>
-
-
-<h5>Funcionalidad</h5>
-<ul>
-<li>Facilitan la navegación y el acceso a aplicaciones y archivos sin necesidad de recordar 
-  nombres o ubicaciones exactas.</li>
-<li>Permiten personalizar el escritorio al agregar o eliminar iconos según las preferencias del 
-  usuario.
-  </li>
-</ul>
-
-
-<p class="lh-1 fs-5"><b>Ventanas</b>:Una ventana es un área rectangular en la pantalla que muestra el contenido de 
-  una aplicación o archivo. Las ventanas permiten a los usuarios trabajar con múltiples 
-  aplicaciones al mismo tiempo.
-  
-  </p>
-  
-
-<h5>Características</h5>
-<ul>
-<li>Bordes y títulos: Cada ventana tiene bordes que permiten redimensionarla y un título que 
-  indica qué aplicación o documento está abierto.</li>
-<li>Controles de ventana: Incluyen botones para minimizar, maximizar y cerrar la ventana.</li>
-<li>Superposición: Las ventanas pueden superponerse unas sobre otras, permitiendo al usuario 
-  ver y trabajar con varias aplicaciones simultáneamente.</li>
-</ul>
-
-
-<h5>Funcionalidad</h5>
-<ul>
-<li>Facilitan la multitarea al permitir que los usuarios cambien entre diferentes aplicaciones sin 
-  cerrar ninguna.</li>
-<li>Proporcionan una forma organizada de visualizar información, ya que cada ventana puede 
-  contener diferentes tipos de contenido (texto, gráficos, datos).
-  
-  </li>
-</ul>
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-       <div class="col-7">
-        <div class="list-group" style="filter: drop-shadow(0px 0px 2px #181717);">
-            <a href="contenido.html" class="list-group-item list-group-item-action" aria-current="true">
+        <div class="col-7">
+          <div
+            class="list-group"
+            style="filter: drop-shadow(0px 0px 2px #181717)"
+          >
+            <a
+              href="contenido.html"
+              class="list-group-item list-group-item-action"
+              aria-current="true"
+            >
               Resumen breve de la unidad
             </a>
-            <a href="contenido1-1.html" class="list-group-item list-group-item-action">Elementos Principales de un Sistema Operativo</a>
-            <a href="contenido1-2.html" class="list-group-item list-group-item-action">Diferentes tipos de sistemas operativos, ventajas y desventajas.</a>
-            <a href="contenido1-3.html" class="list-group-item list-group-item-action">Formas de comunicación, modo texto, modo grafico.</a>
-            <a href="contenido1-4.html" class="list-group-item list-group-item-action active">Escritorio, icono, ventanas.</a>
-            <a href="contenido1-5.html" class="list-group-item list-group-item-action">Operaciones elementales como administrador del S.O. y como usuario común.</a>
-            <a href="contenido1-6.html" class="list-group-item list-group-item-action">Formas de organización de la información. Carpetas y archivos. (Crear, Renombrar, mover, copiar, eliminar, proteger).</a>
-            <a href="contenido1-7.html" class="list-group-item list-group-item-action">Configuración de algunos elementos del sistema operativo.</a>
+            <a
+              href="contenido1-1.html"
+              class="list-group-item list-group-item-action"
+              >Elementos Principales de un Sistema Operativo</a
+            >
+            <a
+              href="contenido1-2.html"
+              class="list-group-item list-group-item-action"
+              >Diferentes tipos de sistemas operativos, ventajas y
+              desventajas.</a
+            >
+            <a
+              href="contenido1-3.html"
+              class="list-group-item list-group-item-action"
+              >Formas de comunicación, modo texto, modo grafico.</a
+            >
+            <a
+              href="contenido1-4.html"
+              class="list-group-item list-group-item-action active"
+              >Escritorio, icono, ventanas.</a
+            >
+            <a
+              href="contenido1-5.html"
+              class="list-group-item list-group-item-action"
+              >Operaciones elementales como administrador del S.O. y como
+              usuario común.</a
+            >
+            <a
+              href="contenido1-6.html"
+              class="list-group-item list-group-item-action"
+              >Formas de organización de la información. Carpetas y archivos.
+              (Crear, Renombrar, mover, copiar, eliminar, proteger).</a
+            >
+            <a
+              href="contenido1-7.html"
+              class="list-group-item list-group-item-action"
+              >Configuración de algunos elementos del sistema operativo.</a
+            >
           </div>
+        </div>
+
+        <div class="col-7">
+          <div
+            class="list-group"
+            style="filter: drop-shadow(0px 0px 2px #181717)"
+          >
+            <a
+              href="../contenido/contenido.html"
+              class="list-group-item list-group-item-action active"
+              aria-current="true"
+            >
+              Unidad 1
+            </a>
+            <a
+              href="contenido2.html"
+              class="list-group-item list-group-item-action"
+              >Unidad 2</a
+            >
+            <a
+              href="contenido3.html"
+              class="list-group-item list-group-item-action"
+              >Unidad 3</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
-<div class="col-7">
-  <div class="list-group" style="filter: drop-shadow(0px 0px 2px #181717);">
-      <a href="../contenido/contenido.html" class="list-group-item list-group-item-action active" aria-current="true">
-        Unidad 1
-      </a>
-      <a href="contenido2.html" class="list-group-item list-group-item-action">Unidad 2</a>
-      <a href="contenido3.html" class="list-group-item list-group-item-action">Unidad 3</a>
-    </div>
-   
-  </div>
+    <!--FOOTER PIE DE PAGINA-->
 
-
-
-
- </div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-    
-    
- 
-    
-
-
-
-
-
-    
-<!--FOOTER PIE DE PAGINA-->
-
-
-<div class="container">
-  <div class="row justify-content-center">
-  <footer class="d-flex flex-wrap align-items-center justify-content-center py-3 my-4 border-top  fw-bold">
-    <p class="col-md-4 mb-0 text-body-secondary">Copyright ©2025; Centro Fernando Aguado y Rico.</p>
-
-
-
-    <ul class="nav col-md-4">
-      <li class="nav-item"><a href="#inicioo" class="nav-link px-2 text-body-secondary">Ir al principio</a></li>
-      <li class="nav-item dropdown" data-bs-theme="dark">
-        <a 
-        href="" 
-        class="nav-link dropdown-toggle"
-        id="submenuProdutos"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-        style="color: rgba(33, 37, 41, 0.75);"
+    <div class="container">
+      <div class="row justify-content-center">
+        <footer
+          class="d-flex flex-wrap align-items-center justify-content-center py-3 my-4 border-top fw-bold"
         >
-        Contenido
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="submenuProdutos">
-     <li><a href="../contenido/contenido.html" class="dropdown-item">Año 1</a></li> 
-     <li><a href="extra.html" class="dropdown-item">Info Extra</a></li> 
-    </ul>
-    </li>
-    <li class="nav-item"><a href="../contactos.html" class="nav-link px-2 text-body-secondary">Contactos</a></li>
-    </ul>
-  </footer>
-</div>
-</div>
-    
-    
-    
+          <p class="col-md-4 mb-0 text-body-secondary">
+            Copyright ©2025; Centro Fernando Aguado y Rico.
+          </p>
+
+          <ul class="nav col-md-4">
+            <li class="nav-item">
+              <a href="#inicioo" class="nav-link px-2 text-body-secondary"
+                >Ir al principio</a
+              >
+            </li>
+            <li class="nav-item dropdown" data-bs-theme="dark">
+              <a
+                href=""
+                class="nav-link dropdown-toggle"
+                id="submenuProdutos"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: rgba(33, 37, 41, 0.75)"
+              >
+                Contenido
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="submenuProdutos">
+                <li>
+                  <a href="../contenido/contenido.html" class="dropdown-item"
+                    >Año 1</a
+                  >
+                </li>
+                <li>
+                  <a href="extra.html" class="dropdown-item">Info Extra</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                href="../contactos.html"
+                class="nav-link px-2 text-body-secondary"
+                >Contactos</a
+              >
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+
     <script src="../js/bootstrap.bundle.min.js"></script>
-
-
-</body>
+  </body>
 </html>
